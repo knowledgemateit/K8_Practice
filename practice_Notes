@@ -1,4 +1,4 @@
-kubectl create -f pod1.yml
+kubectl create -f 1.pod1.yml
 kubectl get pods
 kubectl get pod ubuntu
 kubectl get pod ubuntu -o yaml
@@ -6,13 +6,13 @@ kubectl logs ubuntu
 kubectl exec -it ubuntu sh
 kubectl delete pod/ubuntu
 
-kubectl create -f replicaset.yml
+kubectl create -f 2.replicaset.yml
 kubectl get rs
 kubectl describe rs nginx
 kubectl scale rs nginx --replicas=4
 kubectl delete rs nginx
 
-kubectl create -f deployment.yml
+kubectl create -f 3.deployment.yml
 kubectl get deployment
 kubectl describe deployment/nginx-deployment 
 kubectl delete deployment nginx-deployment
@@ -24,7 +24,7 @@ kubectl scale deployment nginx-deployment --replicas=4
 	5 			4 		*				* 				*
 minutes      hour 	day(month)       month             day(week)
 
-kubectl create -f cronjob.yml
+kubectl create -f 4.cronjob.yml
 kubectl get cronjobs
 kubectl get cronjob hello
 kubectl get jobs --watch
